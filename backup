@@ -1,0 +1,45 @@
+#usr/bin/php
+<?php
+//----------------------NAVIGATION HANDLERS----------------
+$bot->onCommand('start', [MainHandler::class, 'start']);
+//$bot->onText(__('button.nav.back'), [MainHandler::class, 'back']);
+$bot->onCallbackQueryData('main', [MainHandler::class, 'main']);
+$bot->onCallbackQueryData('language', LanguageHandler::class);
+
+// Products
+$bot->onCallbackQueryData('categories_{page}', [ProductHandler::class, 'categories']);
+
+$bot->onCallbackQueryData('products_{category_id}_{page}', [ProductHandler::class, 'products']); // -> handles choosing category too
+$bot->onCallbackQueryData('product_{id}', [ProductHandler::class, 'product']);
+
+//--------------------CART HANDLERS-------------------
+
+$bot->onCallbackQueryData('plus_{count}', [ProductHandler::class, 'plus']);
+$bot->onCallbackQueryData('backspace', [ProductHandler::class, 'backspace']);
+
+$bot->onCallbackQueryData('addcart', [ProductHandler::class, 'addcart']);
+
+// Carts
+$bot->onCallbackQueryData('carts_{page}', [CartHandler::class, 'carts']);
+$bot->onCallbackQueryData('removecart_{id}', [CartHandler::class, 'removecart']);
+$bot->onCallbackQueryData('process', [CartHandler::class, 'process']);
+
+//-----------------------ORDER HANDLERS-------------------
+$bot->onMessageType(MessageType::TEXT, [ProcessHandler::class, 'name'])
+    ->middleware([ProcessHandler::class, 'name_middleware']);
+
+$bot->onText('{text}', [ProcessHandler::class, 'phone_number'])
+    ->middleware([ProcessHandler::class, 'phone_middleware']);
+
+$bot->onContact([ProcessHandler::class, 'phone_contact'])
+    ->middleware([ProcessHandler::class, 'phone_middleware']);
+
+$bot->onLocation([ProcessHandler::class, 'location'])
+    ->middleware([ProcessHandler::class, 'location_middleware']);
+
+$bot->onText('{text}', [ProcessHandler::class, 'city'])
+    ->middleware([ProcessHandler::class, 'city_middleware']);
+
+$bot->onText('{text}', [ProcessHandler::class, 'comment'])
+    ->middleware([ProcessHandler::class, 'comment_middleware']);
+?>
