@@ -2,11 +2,11 @@
 
 return [
     'admin' => [1804724171],
-    'username' => 'ProfMilk_Bot',
+    'username' => 'USERNAME',
 
     'min_price' => 250000,
     'delivery_price' => 25000,
-    'orders_chat' => -4259802775,//4259802775
+    'orders_chat' => 1804724171,
 
     // The Telegram BOT api token
     'token' => env('TELEGRAM_TOKEN'),
