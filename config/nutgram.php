@@ -1,12 +1,12 @@
 <?php
 
 return [
-    'admin' => [1804724171],
-    'username' => 'USERNAME',
+    'admin' => [1804724171, 7418939020],
+    'username' => 'ProfMilk_Bot',
 
     'min_price' => 250000,
     'delivery_price' => 25000,
-    'orders_chat' => 1804724171,
+    'orders_chat' => -4259802775,//4259802775
 
     // The Telegram BOT api token
     'token' => env('TELEGRAM_TOKEN'),

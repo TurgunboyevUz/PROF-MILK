@@ -179,7 +179,7 @@ trait Payme
                 'price' => $order->shipping_price * 100,
                 'count' => 1,
                 'code' => '10112006002000000',
-                'vat_percent' => 0,
+                'vat_percent' => 12,
                 'package_code' => '1209779',
             ];
         }

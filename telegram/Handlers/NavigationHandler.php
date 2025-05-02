@@ -243,7 +243,7 @@ class NavigationHandler
             ]);
         }
 
-        $this->bot->endConversation();
+            $this->bot->endConversation();
         
         $this->bot->sendMessage(
             text: __('message.welcome', [

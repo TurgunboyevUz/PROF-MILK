@@ -35,7 +35,9 @@ Quyidagilarga alohida e'tibor berishingizni so'raymiz👇
 
 ⭐️ Soat 17:00 dan keyin berilgan buyurtmalar ertasi kuni jo'natiladi.
 
-📣 Buyurtmalar kurer orqali 18:00 dan 22:00 gacha yetkazib beriladi (bu vaqt ichida kuryer siz ko'rsatgan telefon raqamingizga oldindan qo'ng'iroq qiladi va buyurtmani yetkazib beradi)
+📣 Buyurtmalar kuryer orqali 18:00 dan 22:00 gacha yetkazib beriladi (bu vaqt ichida kuryer siz ko'rsatgan telefon raqamingizga oldindan qo'ng'iroq qiladi va buyurtmani yetkazib beradi)
+
+🛋 Dam olish kuni: Yakshanba
 
 💁🏻‍♀️ Batafsil ma'lumot uchun @chopon_cheese ga yozishingiz mumkin</b>",
     'order_cancelled' => "❌ Sizning :order_id raqamli buyurtmangiz bekor qilindi!",
